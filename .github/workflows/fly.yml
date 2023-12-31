@@ -1,16 +1,17 @@
 name: Fly Deploy
-on:
-  push:
-    branches:
-      - main
+on: [push]
+# on:
+#   push:
+#     branches:
+#       - master
 jobs:
   deploy:
     name: Deploy app
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: .env create
-        run: echo "APP_URL_ENV="+${{secrets.TEST}} > .env
+      # - name: .env create
+      #   run: echo "APP_URL_ENV="+${{secrets.TEST}} > .env
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --remote-only
         env:

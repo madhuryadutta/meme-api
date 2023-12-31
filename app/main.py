@@ -35,3 +35,21 @@ def read_root(request: Request):
     client_host = request.client.host
     return {"random_meme":  'http://' + str(CDN)+'/static/'+random.choice(source_list)}
 
+
+def read_root(request: Request):
+    client_host = request.client.host
+    
+
+@app.get("/q/{query}")
+def read_item(query: str):
+        i=0
+        result={}
+        for x in source_list:
+            if query in x:
+                i=i+1
+                result.update({i: x})
+        if i==0:
+            output="No Result found"
+        else:
+            output=result
+        return {"random_meme": output}
