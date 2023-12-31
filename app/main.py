@@ -25,7 +25,8 @@ def load_data():
 
 load_data()
 load_dotenv()
-CDN=os.getenv('DB_URL_ENV')
+
+CDN=os.environ['APP_URL_ENV']
 
 app.mount("/static", StaticFiles(directory="local/meme"), name="static")
 
