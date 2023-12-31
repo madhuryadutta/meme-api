@@ -47,7 +47,8 @@ def read_item(query: str):
         for x in source_list:
             if query in x:
                 i=i+1
-                result.update({i: x})
+                url_meme='http://' + str(CDN)+'/static/'+x
+                result.update({i:url_meme})
         if i==0:
             output="No Result found"
         else:
