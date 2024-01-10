@@ -11,15 +11,17 @@
 </head>
 
 <body>
-    <h1>Demo Meme API</h1>
     <div class="container">
+        <div class="container">
 
-        <div class="card" style="width: 18rem;">
-            <img src="" id="dynamic_image_source" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">1</h5>
-                <p class="card-text">23122222222222.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card" style="width: 18rem;">
+                <img src="http://meme-api.databytedigital.com/static/RedditAlien.jpg" id="dynamic_image_source"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Hi,</h5>
+                    <p class="card-text">This is a Demo Aplication</p>
+                    <a href="https://github.com/madhuryadutta/meme-api" class="btn btn-primary">Source Code</a>
+                </div>
             </div>
         </div>
     </div>
@@ -38,14 +40,14 @@
                     },
                     dataType: "json",
                     success: function (response) {
-                        console.log(response)
+                        // console.log(response)
                         source_url = response.random_meme;
                         $('#dynamic_image_source').attr('src', source_url);
-                        console.log('test');
+                        // console.log('test');
                     }
                 });
             }
-            console.log("ready!");
+            console.log("This is a Demo Application!");
             getImageSource()
             setInterval(getImageSource, 5000);
         });
