@@ -43,7 +43,7 @@ app.mount("/static", StaticFiles(directory="local/meme"), name="static")
 @app.get("/")
 def read_root(request: Request):
     client_host = request.client.host
-    return {"random_meme":  'http://' + str(CDN)+'/static/'+random.choice(source_list)}
+    return {"random_meme":  'https://' + str(CDN)+'/static/'+random.choice(source_list)}
 
 
 def read_root(request: Request):
