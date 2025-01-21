@@ -1,15 +1,8 @@
-# meme-api
+# React + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+Currently, two official plugins are available:
 
-Meme Source
-https://archive.org/details/HugeMemePack
-
-
-### How to Use:
-pip install -r requirements.txt
-uvicorn app.main:app --proxy-headers --reload 
-
-## Docker (Deploy)
-docker build -t meme-api .
-docker run -d --name meme-api -p 80:80 meme-api
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

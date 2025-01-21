@@ -1,0 +1,104 @@
+
+/* Global Body Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: white;
+  height: 100vh;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6366f1;
+  /* Tailwind indigo color */
+  border-radius: 10px;
+}
+
+/* Full Viewport Meme Card Container */
+.scroll-container {
+  overflow-y: scroll;
+  height: 100vh;
+  /* Full height */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: y mandatory;
+}
+
+.meme-card {
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  background-color: #1f2937;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.meme-card img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  max-height: 75vh;
+}
+
+/* Text inside meme cards */
+.meme-card-text {
+  position: absolute;
+  bottom: 10px;
+  left: 5%;
+  right: 5%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Loading Spinner and Text */
+.loading-text {
+  text-align: center;
+  color: #6366f1;
+  font-size: 20px;
+  margin: 2rem;
+}
+
+/* Responsive Meme Card Layout */
+@media (max-width: 640px) {
+  .meme-card {
+    margin-bottom: 0.75rem;
+  }
+
+  .meme-card-text {
+    font-size: 14px;
+  }
+}
+
+/* Custom Button Styling */
+button {
+  padding: 12px 24px;
+  background-color: #6366f1;
+  /* Tailwind Indigo */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4c51bf;
+  /* Darker Indigo */
+}
+
+/* Centered Text */
+.text-center {
+  text-align: center;
+}
