@@ -707,7 +707,7 @@ function MemeReels() {
     };
 
     useEffect(() => {
-        const throttledHandleScroll = throttle(handleScroll, 100);
+        const throttledHandleScroll = throttle(handleScroll, 10);
         window.addEventListener('scroll', throttledHandleScroll);
 
         return () => {
