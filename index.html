@@ -108,13 +108,14 @@
         function getImageSource() {
           $.ajax({
             type: "GET",
-            url: "https://meme-api.databytedigital.com",
+            url: "https://meme-api.databytedigital.com/api/random",
             data: {},
             dataType: "json",
             success: function (response) {
-              var source_url = response.random_meme;
-              $("#dynamic_image_source").attr("src", source_url);
-              $("#dynamic_image_source").attr("alt", source_url);
+              var preview_url = response.preview_url;
+              var text = response.text_corrected;
+              $("#dynamic_image_source").attr("src", preview_url);
+              $("#dynamic_image_source").attr("alt", text);
             },
           });
         }
